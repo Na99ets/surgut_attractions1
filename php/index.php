@@ -7,25 +7,12 @@
     <title>surgut_attractions</title>
 </head>
 <body>
-    <header>
-        <div class="fon1">
-            <div class="krug">
-                <img class="logo" src="img/logo.png" alt="">
-            </div>
-            <h1 class="RuEn">RU/EN</h1>
-            <img class="strelka" src="img/catalog1.png" alt="">
-            <div class="searchline"> 
-                <input type="text" class="search-input" placeholder="Введите запрос...">
-                <button class="search-button" type="submit">
-                    <img id="a1" src="img/seacrh1.png" alt="">
-                </button>
-            </div>
-            <img class="media" src="img/socialmedia.png" alt="">
-        </div>
-    </header>
+    <?php include "header.php"?>
     <div>
         <div class="fon"></div>
-        <div class="substrate">
+        <div class="substrate"></div>
+        <div class="content">
+            <div class="contentbox">
                 <div class="attraction">
                     <div class="imgshadow"></div>
                 </div>
@@ -36,36 +23,15 @@
                         
                         Фигура казака олицетворяет людей, принимавших участие в строительстве (большинство из которых были казаками), местных жителей и добровольных переселенцев. Священник же символизирует крепкую веру и духовность русского народа. Высота всего памятника — 15 м, а на его изготовление ушло 12 месяцев и 40 тонн бронзы. Под фундаментом заложена капсула-письмо для потомков
                     </div>
-                    <input type="button" class="mapbutton" value="Показать на карте">
+                    <divc class="buttons">
+                        <a type="button" href="#" class="button mapbutton">Показать на карте
+                        </a>
+                    </div>
+                    <script src="script.js"></script>
                 </div>
+            </div>
         </div>
     </div>
-    <footer>
-        <p>
-            Главная
-            О нас
-            Контакты
-            Лицензия
-            О возврате средств
-            Правила конфидециальности</p>
-        <p>Главная
-            О нас
-            Контакты
-            Лицензия
-            О возврате средств
-            Правила конфидециальности</p>
-        <p>Главная
-            О нас
-            Контакты
-            Лицензия
-            О возврате средств
-            Правила конфидециальности</p>
-        <p>Главная
-            О нас
-            Контакты
-            Лицензия
-            О возврате средств
-            Правила конфидециальности</p>
-    </footer>
+    <?php include "footer.php"?>
 </body>
 </html>

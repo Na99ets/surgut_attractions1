@@ -25,7 +25,7 @@ box-shadow: 0px 4px 20px 0px rgba(11, 11, 13, 0.3);
 display: flex;
 justify-content: center;
 align-items: center;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 border: black;
 gap: 2em;
 }
@@ -75,27 +75,30 @@ align-self: flex-end;
 
 }
 .search-input{
-
-    font-size: 12px;
+    padding-left: 10px;
+    font-size: 16px;
     background: #DEDFE2;
-    border-radius: 320px;
+    border-radius: 15px 0px 0px 15px;
     border: 1px solid #A7A7AB;
     flex-basis: 80%;
+    flex-shrink: 5;
 
 }
 .search-button
 { 
-    /* position: absolute; */
-    border:none;
-    background-color:rgba(0,0,0,0);
+    border-radius: 0px 15px 15px 0px;
+    background-color: rgba(242, 242, 242, 1);
+    border: 1px solid #A7A7AB;
     flex-basis: 20%;
-    display: flex;
     justify-content: end;
-}
-#a1
-{
-    position: absolute;
-    height: 50%;
+    background-image: url(../img/seacrh1.png);
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: inline-block;
+    overflow: hidden;
 }
 .media
 {
@@ -121,7 +124,6 @@ footer
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    gap: 10em;
 }
 .substrate
 {
@@ -133,16 +135,11 @@ footer
     background: rgba(242, 242, 242, 1);
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.4);
     z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2em;
 }
 .attraction
 {
     min-width: 200px;
-    height: 40%;
+    height: 80%;
     border-radius: 15px 15px 15px 15px;
     flex-basis: 25%;
     background-image: url(../img/Rectangle.png);
@@ -167,18 +164,20 @@ footer
 }
 .infobox
 {
-    height: 40%;
+    height: 80%;
     /* border: 1px solid black; */
     flex-shrink: 10;
     flex-basis: 55%;
 }
 p
 {
+    padding-left: 10%;
     white-space: pre-line;
     word-wrap: break-word;
     font-size: 12px;
     line-height: 15px;
     color: rgba(28, 28, 30, 0.8);
+    flex-basis: 25%;
 }
 .title
 {
@@ -190,15 +189,69 @@ p
     white-space: pre-line;
     word-wrap: break-word;
 }
-.mapbutton
+.buttons .button.mapbutton
 {
+    padding: 12px 40px;
     position: relative;
-    bottom: -25px;
-    height: 35px;
-    width: 170px;
+    display: inline-block;
+    bottom: -100px;
     border: 1.5px solid rgba(0, 0, 0, 1);
     border-radius: 30px 30px 30px 30px;
     left: 37%;
     background: rgba(255, 199, 0, 1);
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
     
+}
+.content 
+{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    bottom: 0%;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1.5px solid black; */
+}
+.contentbox
+{
+    /* border: 1.5px solid black; */
+    flex-basis: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.buttons .button .overlay
+{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background: white;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: blink 0.5s linear infinite;
+}
+@keyframes blink {
+    0%{
+        height: 0px;
+        width: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        height: 400px;
+        width: 400px;
+        opacity: 0;
+    }
 }
