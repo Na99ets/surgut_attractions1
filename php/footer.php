@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer">
         <p>
             Главная
             О нас
